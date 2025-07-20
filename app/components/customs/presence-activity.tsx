@@ -50,7 +50,7 @@ export function PresenceActivity({ index, presence, activity }: Props) {
       <Card
         key={index}
         data-card-index={index}
-        className={`transition-transform duration-300 ease-in-out cursor-pointer w-[calc(100%-2.5rem)] lg:w-[calc(100%-5rem)] h-20 max-h-20 mx-5 my-2 p-2 bg-neutral-800 shadow-none border-border
+        className={`transition-transform duration-300 ease-in-out cursor-pointer w-[calc(100%-2.5rem)] lg:w-[calc(100%-5rem)] h-20 max-h-20 mx-5 my-2 p-2 bg-accent shadow-none border-border
           ${index === 0 ? "z-30" : index === 1 ? "z-20" : "z-10"}
           hover:scale-[103%]
       `}

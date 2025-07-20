@@ -54,10 +54,7 @@ export function ProjectSection({ delay, className, style }: SectionProps) {
               delay={0.25 * (index + 3.5)}
               className="w-full h-full"
             >
-              <Card
-                key={project.title}
-                className="w-full h-full px-4 py-3 bg-neutral-800/70 gap-2.5"
-              >
+              <Card key={project.title} className="w-full h-full px-4 py-3 bg-accent/70 gap-2.5">
                 <CardHeader className="p-0 gap-0.5">
                   <CardTitle className="text-lg font-bold uppercase">{project.title}</CardTitle>
                   <CardDescription>{project.description}</CardDescription>
