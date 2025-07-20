@@ -16,7 +16,7 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  const [loaded, setLoaded] = useState(true);
+  const [loaded, setLoaded] = useState(import.meta.env.DEV || false);
 
   useEffect(() => {
     if (loaded) return;
