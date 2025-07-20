@@ -1,6 +1,7 @@
 export interface SectionProps {
   delay: number;
-  style: React.CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
 export interface ProjectData {
