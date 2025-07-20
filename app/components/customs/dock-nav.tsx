@@ -69,7 +69,7 @@ const navigation: NavigationData = {
       },
       {
         name: "Email",
-        url: "mailto:riskimuhammmad1@gmail.com",
+        url: "mailto:riskimuhammmad1@gmail.com?subject=Halo&body=Hello,%20Rizki👋🏻,%20perkenalkan%20aku%20adalah%20&cc=kiizuha@gnuweeb.org,kiizuha1@gnuweeb.org",
         newTab: false,
         icon: Icons.email,
       },
