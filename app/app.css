@@ -4,10 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, "SF Mono", Consolas,
-    "Liberation Mono", Menlo, monospace;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono",
+    Menlo, monospace;
   --font-nunito: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
   --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-rubik: "Rubik", ui-sans-serif, system-ui, sans-serif;
@@ -129,6 +129,48 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  .force-break {
+    /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+}
+
+.grid-template {
+  @media (width >= 64rem /* 1024px */) {
+    grid-template-areas:
+      "profile  profile  profile  profile"
+      "blog     blog     blog     blog"
+      "activity activity activity activity"
+      "project  project  project  project"
+      "unknown  unknown  unknown  unknown";
+  }
+}
+
+.grid-template {
+  @media (width >= 80rem /* 1280px */) {
+    grid-template-areas:
+      "profile  profile  blog     blog"
+      "activity activity activity unknown"
+      "project  project  project  project";
+  }
+}
+
+.grid-template {
+  @media (width >= 96rem /* 1536px */) {
+    grid-template-areas:
+      "profile  blog     blog    unknown"
+      "activity activity project project"
+      "activity activity project project";
   }
 }
 
