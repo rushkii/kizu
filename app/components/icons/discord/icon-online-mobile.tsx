@@ -18,7 +18,13 @@ export function DiscordIconOnlineMobile({ size = 25, padding = 8, className }: P
       aria-hidden="true"
       className={className}
     >
-      <circle cx={center - 18} cy={center - 12} r={radius - 12} fill="#1e1e1e" />
+      <circle
+        cx={center - 18}
+        cy={center - 12}
+        r={radius - 12}
+        fill="currentColor"
+        className="text-accent"
+      />
       <rect
         width={iconSize}
         height={iconSize + 12}

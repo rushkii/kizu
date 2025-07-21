@@ -39,11 +39,7 @@ export default function Home() {
           <BlogSection delay={0.25 * 2} className="[grid-area:blog]" />
           <ActivitySection delay={0.25 * 3} className="[grid-area:activity]" />
           <ProjectSection delay={0.25 * 4} className="[grid-area:project]" />
-          <SectionWindow
-            title="Coming Soon"
-            delay={0.25 * 5}
-            className="[grid-area:unknown]"
-          >
+          <SectionWindow title="Coming Soon" delay={0.25 * 5} className="[grid-area:unknown]">
             <div className="flex flex-col items-center justify-center">
               <p className="lg:text-lg text-muted-foreground">Stay Toon :^)</p>
             </div>

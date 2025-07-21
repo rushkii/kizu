@@ -18,7 +18,7 @@ export function DiscordIconOnline({ size = 25, padding = 8, className }: Props) 
       aria-hidden="true"
       className={className}
     >
-      <circle cx={center} cy={center} r={radius} fill="#1e1e1e" />
+      <circle cx={center} cy={center} r={radius} fill="currentColor" className="text-accent" />
       <rect
         width={iconSize}
         height={iconSize}
