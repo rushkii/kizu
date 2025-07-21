@@ -24,7 +24,9 @@ export function getInitialName(user?: Types.DiscordUser) {
 
 export function getDiscordAssetUrl(appId?: string, assetId?: string) {
   if (!appId || !assetId) return "";
-  return ddgImgProxy(`https://cdn.discordapp.com/app-assets/${appId}/${assetId}.png`);
+  return ddgImgProxy(
+    `https://cdn.discordapp.com/app-assets/${appId}/${assetId}.png`
+  );
 }
 
 export function getAssetUrl(value?: string | null) {
@@ -34,12 +36,13 @@ export function getAssetUrl(value?: string | null) {
     return ddgImgProxy(value);
   }
 
-  const match = value.match(/^mp:external\/[^\/]+\/(.+)/);
+  const match = value.match(/https\/(.*)$/);
   if (!match) return "";
 
-  return ddgImgProxy(match[1].replace(/^(https?)\//, "$1://"));
+  return ddgImgProxy("https://" + match[1]);
 }
 
 export function ddgImgProxy(src: string) {
-  return "https://external-content.duckduckgo.com/iu/?u=" + src;
+  // return "https://external-content.duckduckgo.com/iu/?u=" + src;
+  return src;
 }
